@@ -1,0 +1,179 @@
+<section class="view-page">
+    <fab-title Title="{{this.data.title}}">{{this.data.description}}</fab-title>
+    <article class="view-content fadeIn animated-text">
+        <mat-tab-group>
+            <mat-tab>
+                <ng-template mat-tab-label>
+                    <mat-icon>play_circle_filled</mat-icon>
+                    &nbsp;
+                    <span class="tab-label">Screencast</span>
+                </ng-template>
+                <ng-template matTabContent>
+                    <article *ngIf="this.isExtraLargeVersion | async">
+                        <div class="iframe-xlarge-border">
+                            <div class="iframe-xlarge-container">
+                                <iframe
+                                    title="{{this.data.title}}"
+                                    width="1280"
+                                    height="720"
+                                    [src]="this.url | mySafe"
+                                    allowfullscreen
+                                    class="iframe-xlarge"
+                                ></iframe>
+                            </div>
+                        </div>
+                        <div class="iframe-xlarge-no-border">
+                            <a
+                                (click)="onChangeToXL(false)"
+                                color="primary"
+                                mat-raised-button
+                            >
+                                LG
+                            </a>
+                            &nbsp;
+                            <a
+                                (click)="onChangeToMedium(true)"
+                                color="primary"
+                                mat-raised-button
+                                target="_blank"
+                            >
+                                MD
+                            </a>
+                        </div>
+                    </article>
+                    <article *ngIf="this.isLargeVersion | async">
+                        <div class="iframe-large-border">
+                            <div class="iframe-large-container">
+                                <iframe
+                                    title="{{this.data.title}}"
+                                    width="853"
+                                    height="480"
+                                    [src]="this.url | mySafe"
+                                    allowfullscreen
+                                    class="iframe-large"
+                                ></iframe>
+                            </div>
+                        </div>
+                        <div class="iframe-large-no-border">
+                            <a
+                                (click)="onChangeToXL(true)"
+                                color="primary"
+                                mat-raised-button
+                                target="_blank"
+                            >
+                                XL
+                            </a>
+                            &nbsp;
+                            <a
+                                (click)="onChangeToMedium(true)"
+                                color="primary"
+                                mat-raised-button
+                                target="_blank"
+                            >
+                                MD
+                            </a>
+                        </div>
+                    </article>
+                    <article *ngIf="this.isMediumVersion | async">
+                        <div class="iframe-medium-border">
+                            <div class="iframe-medium-container">
+                                <iframe
+                                    title="{{this.data.title}}"
+                                    width="640"
+                                    height="360"
+                                    [src]="this.url | mySafe"
+                                    allowfullscreen
+                                    class="iframe-medium"
+                                ></iframe>
+                            </div>
+                        </div>
+                        <div class="iframe-medium-no-border">
+                            <a
+                                (click)="onChangeToXL(true)"
+                                color="primary"
+                                mat-raised-button
+                                target="_blank"
+                            >
+                                XL
+                            </a>
+                            &nbsp;
+                            <a
+                                (click)="onChangeToXL(true)"
+                                color="primary"
+                                mat-raised-button
+                                target="_blank"
+                            >
+                                LG
+                            </a>
+                        </div>
+                    </article>
+                    <article *ngIf="this.isSmallVersion | async">
+                        <div class="iframe-small-border">
+                            <div class="iframe-small-container ">
+                                <iframe
+                                    title="{{this.data.title}}"
+                                    width="460"
+                                    height="315"
+                                    [src]="this.url | mySafe"
+                                    allowfullscreen
+                                    class="iframe-small"
+                                ></iframe>
+                            </div>
+                        </div>
+                    </article>
+                </ng-template>
+            </mat-tab>
+            <mat-tab *ngIf="this.isCodeRepoAvailable | async">
+                <ng-template mat-tab-label>
+                    <mat-icon>code</mat-icon>
+                    &nbsp;
+                    <span class="tab-label">Sample Code</span>
+                </ng-template>
+                <ng-template matTabContent>
+                    <div
+                        style="padding:1.8rem;"
+                        class="fadeIn animated-text"
+                    >
+                        <a
+                            color="primary"
+                            [href]="this.data.code | mySafe"
+                            mat-raised-button
+                            target="_blank"
+                        >
+                            Bitbucket
+                        </a>
+                    </div>
+                </ng-template>
+            </mat-tab>
+            <mat-tab *ngIf="this.isDocumentationAvailable | async">
+                <ng-template mat-tab-label>
+                    <span class="tab-icon"></span>
+                    <mat-icon>library_books</mat-icon>
+                    &nbsp;
+                    <span class="tab-label">Documentation</span>
+                </ng-template>
+                <ng-template matTabContent></ng-template>
+            </mat-tab>
+            <mat-tab *ngIf="this.isDetailsAvailable | async">
+                <ng-template mat-tab-label>
+                    <mat-icon>emoji_objects</mat-icon>
+                    &nbsp;
+                    <span class="tab-label">Details</span>
+                </ng-template>
+                <ng-template matTabContent>
+                    <div class="text-details-wrapper fadeIn animated-text">
+                        <span class="text-details-row">
+                            <span class="text-details-label">Author:</span>
+                            {{this.data.author}}
+                        </span>
+                        <span class="text-details-row">
+                            <span class="text-details-label">Duration:</span>
+                            {{this.data.duration}}
+                        </span>
+                        {{this.data.description}}
+                    </div>
+                </ng-template>
+            </mat-tab>
+        </mat-tab-group>
+    </article>
+</section>

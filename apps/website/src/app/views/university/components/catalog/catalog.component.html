@@ -1,0 +1,106 @@
+<section class="view-page">
+    <fab-title Title="Course Catalog">Learn best practices and standards.</fab-title>
+    <article
+        class="view-content fadeIn animated-text"
+        fxLayoutAlign.md="stretch stretch"
+        fxLayoutGap="25px"
+        fxLayoutAlign="stretch"
+        fxLayout="row wrap"
+        fxLayout.lt-sm="column"
+        fxLayout.lt-md="column"
+        fxLayout.lt-lg="row wrap"
+        *ngFor="let data of this.context.dataContext.datasource | async"
+    >
+        <mat-card
+            fxflexfill
+            class="example-card mat-elevation-z4"
+            fxFlex="3 0 0"
+            fxFlexAlign="center center"
+        >
+            <mat-card-title>{{data.row[0].title}}</mat-card-title>
+            <mat-card-subtitle>{{data.row[0].description}}</mat-card-subtitle>
+            <img
+                mat-card-image
+                src="assets/eu-previews/{{data.row[0].thumb}}"
+                alt="{{data.row[0].title}}"
+            >
+            <mat-card-content>
+                <span class="item-wrapper">
+                    <span class="item-button">
+                        <a
+                            (click)="onClick(data.row[0].id)"
+                            mat-flat-button
+                            color="primary"
+                        >
+                            Go to details
+                        </a>
+                    </span>
+                </span>
+            </mat-card-content>
+        </mat-card>
+        <mat-card
+            fxflexfill
+            class="example-card mat-elevation-z4"
+            fxFlex="3 0 0"
+            fxFlexAlign="center center"
+        >
+            <span class="item-wrapper">
+                <mat-card-title>{{data.row[1].title}}</mat-card-title>
+                <mat-card-subtitle>{{data.row[1].description}}</mat-card-subtitle>
+
+            </span>
+            <img
+                matRipple
+                mat-card-image
+                src="assets/eu-previews/{{data.row[1].thumb}}"
+                alt="{{data.row[1].title}}"
+            >
+            <mat-card-content>
+
+                <span
+                    class="item-wrapper"
+                    title="Author"
+                >
+                    <span class="item-button">
+
+                        <a
+                            (click)="onClick(data.row[1].id)"
+                            mat-flat-button
+                            color="primary"
+                        >
+                            Go to details
+                        </a>
+                    </span>
+                </span>
+            </mat-card-content>
+        </mat-card>
+        <mat-card
+            fxflexfill
+            class="example-card mat-elevation-z4"
+            fxFlex="3 0 0"
+            fxFlexAlign="center center"
+        >
+            <mat-card-title>{{data.row[2].title}}</mat-card-title>
+            <mat-card-subtitle>{{data.row[2].description}}</mat-card-subtitle>
+            <img
+                mat-card-image
+                src="assets/eu-previews/{{data.row[2].thumb}}"
+                alt="{{data.row[2].title}}"
+            >
+            <mat-card-content>
+                <span class="item-wrapper">
+                    <span class="item-button">
+
+                        <a
+                            (click)="onClick(data.row[2].id)"
+                            mat-flat-button
+                            color="primary"
+                        >
+                            Go to details
+                        </a>
+                    </span>
+                </span>
+            </mat-card-content>
+        </mat-card>
+    </article>
+</section>

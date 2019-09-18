@@ -1,0 +1,152 @@
+<mat-toolbar class="mat-toolbar-rows {{this.cssTemplate | async}} mat-elevation-z3">
+    <mat-toolbar-row class="mat-toolbar-row-1">
+        <div class="col-logo {{this.cssTemplate | async}}">
+            <button
+                type="button"
+                mat-button
+                (click)="onToggle()"
+                class="mat-icon-display"
+            >
+                <mat-icon class="mat-icon">menu</mat-icon>
+            </button>
+            <a
+                *ngIf="this.context.nav.isTemplateEE | async"
+                mat-button
+                class="logo-button fadeInLeft animated-text"
+                (click)="onClick(1)"
+                aria-label="Engineering Excellence"
+            >
+                <img
+                    src="assets/ee.svg"
+                    class="logoImage"
+                    alt="Engineering Excellence"
+                >
+                <span class="logo-text-wrapper">
+                    <span class="logo-text-line-1">Engineering Excellence</span>
+                </span>
+            </a>
+            <a
+                *ngIf="this.context.nav.isTemplateEU | async"
+                mat-button
+                class="logo-button fadeInLeft animated-text"
+                (click)="onClick(5)"
+                aria-label="Excalibur University"
+            >
+                <img
+                    src="assets/eu.svg"
+                    class="logoImage"
+                    alt="Excalibur University"
+                >
+                <span class="logo-text-wrapper">
+                    <span class="logo-text-line-1 eu">Excalibur University</span>
+                </span>
+            </a>
+        </div>
+        <nav
+            class="col-action"
+            aria-label
+        ></nav>
+    </mat-toolbar-row>
+    <mat-toolbar-row class="mat-toolbar-row-2">
+        <nav
+            *ngIf="this.context.nav.isTemplateEE | async"
+            class="col-nav fadeInRight animated-text "
+            aria-label="Navigation"
+        >
+            <a
+                mat-button
+                class="site-button"
+                (click)="onClick(1)"
+                aria-label="Home"
+            >
+                <span class="{{this.context.nav.ee.buttonLabelHome | async }}">Home</span>
+            </a>
+            <a
+                mat-button
+                class="site-button"
+                (click)="onClick(2)"
+                aria-label="Our Team"
+            >
+                <span class="{{this.context.nav.ee.buttonLabelTeam | async }}">Our Team</span>
+            </a>
+            <a
+                mat-button
+                class="site-button"
+                (click)="onClick(3)"
+                aria-label="News & Updates"
+            >
+                <span class="{{this.context.nav.ee.buttonLabelUpdates | async }}">News & Updates</span>
+            </a>
+            <a
+                mat-button
+                class="site-button"
+                (click)="onClick(4)"
+                aria-label="Resources"
+            >
+                <span class="{{this.context.nav.ee.buttonLabelResources | async }}">Resources</span>
+            </a>
+        </nav>
+        <nav
+            *ngIf="this.context.nav.isTemplateEU | async"
+            class="col-nav fadeInRight animated-text "
+            aria-label="Navigation"
+        >
+            <a
+                mat-button
+                class="site-button"
+                [routerLink]="'university/home'"
+                (click)="onClickChild(1)"
+                aria-label="Welcome"
+            >
+                <span class="{{this.context.nav.eu.buttonLabelHome | async }}">Welcome</span>
+            </a>
+            <!-- <a
+                mat-button
+                class="site-button"
+                aria-label="Catalog"
+                (click)="onClickChild(2)"
+                [routerLink]="'university/about'"
+            >
+                <span class="{{this.context.nav.eu.buttonLabelAbout | async }}">About</span>
+            </a> -->
+            <a
+                mat-button
+                class="site-button"
+                aria-label="Catalog"
+                [routerLink]="'university/catalog'"
+                (click)="onClickChild(3)"
+            >
+                <span class="{{this.context.nav.eu.buttonLabelCatalog | async }}">Course Catalog</span>
+            </a>
+        </nav>
+        <nav
+            *ngIf="this.context.nav.isTemplateEE | async"
+            class="col-action col-social fadeInLeft animated-text"
+            aria-label
+        >
+
+            <a
+                mat-button
+                class="site-button"
+                (click)="onClick(5)"
+                aria-label="Excalibur University"
+            >
+                <span class="{{this.context.nav.ee.buttonLabelUniversity | async }}">Excalibur University</span>
+            </a>
+        </nav>
+        <nav
+            *ngIf="this.context.nav.isTemplateEU | async"
+            class="col-action col-social fadeInRight animated-text"
+            aria-label
+        >
+            <a
+                mat-button
+                class="site-button"
+                (click)="onClick(1)"
+                aria-label="Engineering Excellence"
+            >
+                <span class="{{this.context.nav.ee.buttonLabelHome | async }}">Engineering Excellence</span>
+            </a>
+        </nav>
+    </mat-toolbar-row>
+</mat-toolbar>

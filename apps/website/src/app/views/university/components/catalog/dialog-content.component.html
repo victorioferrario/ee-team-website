@@ -1,0 +1,30 @@
+<h2 mat-dialog-title>Install Angular</h2>
+<mat-dialog-content>
+    <div>
+        <div style='position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;'>
+
+            <video>
+                <source
+                    src="https://web.microsoftstream.com/embed/video/825d2335-3105-4975-9503-d8c8a4cfc4ff?autoplay=false&showinfo=true&preload=none%5C"
+                    type="video/mp4"
+                >
+            </video>
+        </div>
+    </div>
+
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button
+        mat-button
+        mat-dialog-close
+    >
+        Cancel
+    </button>
+    <button
+        mat-button
+        [mat-dialog-close]="true"
+        cdkFocusInitial
+    >
+        Install
+    </button>
+</mat-dialog-actions>

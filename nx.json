@@ -1,0 +1,30 @@
+{
+  "npmScope": "ee-workspace",
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": "*",
+    "tsconfig.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "projects": {
+    "website": {
+      "tags": ["ee"]
+    },
+    "website-e2e": {
+      "tags": []
+    },
+    "fabric": {
+      "tags": ["lib"]
+    },
+    "services": {
+      "tags": ["lib"]
+    },
+    "scrollflow": {
+      "tags": ["lib"]
+    },
+    "forms": {
+      "tags": []
+    }
+  }
+}

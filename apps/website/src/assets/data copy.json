@@ -1,0 +1,115 @@
+{
+    "catalog": [{    
+            "row":[
+                {
+                    "title":"Reliability engineering",
+                    "author":"Brian McGinnis",            
+                    "description": "Overview of the Principles of reliability engineering",
+                    "published":"09/10/2019",
+                    "duration": "10:14",
+                    "thumb":"principles-of-reliability.jpg",
+                    "video":"null"
+                },
+                {
+                    "title":"Monitoring Tools",
+                    "author":"Brian McGinnis",            
+                    "description": "Overview of Excalibur monitoring tools and tool independence.",
+                    "published":"09/10/2019",
+                    "duration": "16:13",
+                    "thumb":"eu.fw.png",
+                    "video":"null"
+                }
+            ]
+        }, {
+        "row": [
+
+            {
+                "title":"Excalibur Telemetry",
+                "author":"Brian McGinnis",            
+                "description": "Overview of telemetry in Excalibur",
+                "published":"09/10/2019",
+                "duration": "08:27",
+                "thumb":"eu.fw.png",
+                "video":"null"
+            },
+            {
+                "title":"Telemetry Events",
+                "author":"Brian McGinnis",            
+                "description": "Introduction to Excalibur Telemetry Events",
+                "published":"09/10/2019",
+                "duration": "21:40",
+                "thumb":"eu.fw.png",
+                "video":"null"
+            }
+        ]
+        },
+        {
+        "row": [       
+            {
+                "title":"Excalibur traceability",
+                "author":"Brian McGinnis",            
+                "description": "Explanation of traceability in Excalibur",
+                "published":"09/10/2019",
+                "duration": "08:33",
+                "thumb":"eu.fw.png",
+                "video":"null"
+            },
+            {
+                "title":"Telemetry Library",
+                "author":"Brian McGinnis",            
+                "description": "Overview of Excalibur telemetry libraries for instrumentation.",
+                "published":"09/10/2019",
+                "duration": "05:04",
+                "thumb":"telemetry-overview.png",
+                "video":"null"
+            }
+        ]
+        },
+        {
+        "row": [        
+            {
+                "title":"Instrumenting Spring Boot Microservices - Part 1",
+                "author":"Brian McGinnis",            
+                "description": "Part 1: setup an simple Spring Boot microservice. Add instrumentation of Excalibur telemetry. Generate Config, Response and Error event types.",
+                "published":"09/10/2019",
+                "duration": "44:33",
+                "thumb":"spring-boot.png",
+                "code":"https://bitbucket.rccl.com/projects/EE/repos/excalibur-u-screencasts/browse/reliability-engineering-series/instrumenting-spring-boot-microservice/part-1",
+                "video":"null"
+            },
+            {
+                "title":"Instrumenting Spring Boot Microservices - Part 2",
+                "author":"Brian McGinnis",            
+                "description": "Part 2: Refactor and enhance the microservice. Add an Interceptor and some other techniques to reduce boilerplate code. Generate a Counter metric.",
+                "published":"09/10/2019",
+                "duration": "51:05",
+                "thumb":"spring-boot.png",
+                "code": "https://bitbucket.rccl.com/projects/EE/repos/excalibur-u-screencasts/browse/reliability-engineering-series/instrumenting-spring-boot-microservice/part-2",
+                "video":"null"
+            }
+        ]},
+        {
+        "row": [
+            {
+                "title":"Instrumenting Spring Boot Microservices - Part 3",
+                "author":"Brian McGinnis",            
+                "description": "Part 3: Install Prometheus and Grafana. Create a new dashboard for the instumented microservice.",
+                "published":"09/10/2019",
+                "duration": "51:05",
+                "thumb":"spring-boot.png",
+                "code": "https://bitbucket.rccl.com/projects/EE/repos/excalibur-u-screencasts/browse/reliability-engineering-series/instrumenting-spring-boot-microservice/part-3",
+                "video":"null"
+            },
+            {
+                "title":"Instrumenting Spring Boot Microservices - Part 4",
+                "author":"Brian McGinnis",            
+                "description": "Part 4: Create a simple Splunk dashboard for microservice from this tutorial with 'Splunk Free'.",
+                "published":"09/10/2019",
+                "duration": "51:05",
+                "thumb":"spring-boot.png",
+                "code": "https://bitbucket.rccl.com/projects/EE/repos/excalibur-u-screencasts/browse/reliability-engineering-series/instrumenting-spring-boot-microservice/part-3",
+                "video":"null"
+            }
+        ]}
+    ]
+}

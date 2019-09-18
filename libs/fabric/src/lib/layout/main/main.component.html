@@ -1,0 +1,134 @@
+<ng-container>
+    <mat-sidenav-container
+        class="sidenav-container {{this.cssTemplate | async}}"
+        #scrollViewPort
+    >
+        <mat-sidenav
+            mode="over"
+            #drawer
+            [opened]="this.context.page.sideNavIsOpen"
+            class="sideNav"
+        >
+            <mat-nav-list *ngIf="this.context.nav.isTemplateEE | async">
+                <h3
+                    mat-subheader
+                    class="mini-text"
+                >
+                    Menu
+                </h3>
+                <mat-divider></mat-divider>
+                <a
+                    mat-list-item
+                    href="javascript:void(0)"
+                    (click)="onClick(1)"
+                    class="list-button"
+                >
+                    <span class="{{this.context.nav.ee.buttonLabelHome | async }}">Home</span>
+                    <span class="ink-vertical {{this.context.nav.ee.buttonLabelHome  | async}}-ink"></span>
+                </a>
+                <mat-divider></mat-divider>
+                <a
+                    mat-list-item
+                    href="javascript:void(0)"
+                    (click)="onClick(2)"
+                    class="list-button"
+                >
+                    <span class="{{this.context.nav.ee.buttonLabelTeam | async }}">Our Team</span>
+                    <span class="ink-vertical {{this.context.nav.ee.buttonLabelTeam  | async}}-ink"></span>
+                </a>
+                <mat-divider></mat-divider>
+                <a
+                    mat-list-item
+                    href="javascript:void(0)"
+                    (click)="onClick(3)"
+                    class="list-button"
+                >
+                    <span class="{{this.context.nav.ee.buttonLabelUpdates | async }}">News & Updates</span>
+                    <span class="ink-vertical {{this.context.nav.ee.buttonLabelUpdates | async}}-ink"></span>
+                </a>
+                <mat-divider></mat-divider>
+                <a
+                    mat-list-item
+                    class="list-button"
+                    href="javascript:void(0)"
+                    (click)="onClick(4)"
+                >
+                    <span class="{{this.context.nav.ee.buttonLabelResources | async }}">Resources</span>
+                    <span class="ink-vertical {{this.context.nav.ee.buttonLabelResources| async}}-ink"></span>
+                </a>
+                <mat-divider></mat-divider>
+                <a
+                    mat-list-item
+                    href="javascript:void(0)"
+                    (click)="onClick(5)"
+                    class="list-button"
+                >
+                    <span class="{{this.context.nav.ee.buttonLabelUniversity | async }}">Excalibur University</span>
+                    <span class="ink-vertical {{this.context.nav.ee.buttonLabelUniversity| async}}-ink"></span>
+                </a>
+                <mat-divider></mat-divider>
+            </mat-nav-list>
+            <mat-nav-list
+                *ngIf="this.context.nav.isTemplateEU | async"
+                aria-label="Navigation"
+            >
+                <h3
+                    mat-subheader
+                    class="mini-text"
+                >
+                    Menu
+                </h3>
+                <mat-divider></mat-divider>
+                <a
+                    href="javascript:void(0)"
+                    mat-list-item
+                    class="list-button"
+                    [routerLink]="'university/home'"
+                    (click)="onClickChild(1)"
+                    aria-label="Welcome"
+                >
+                    <span class="{{this.context.nav.eu.buttonLabelHome | async }}">Welcome</span>
+                    <span class="ink-vertical {{this.context.nav.eu.buttonLabelHome  | async}}-ink"></span>
+                </a>
+                <!-- <mat-divider></mat-divider>
+                <a
+                    mat-list-item
+                    class="list-button"
+                    aria-label="About"
+                    (click)="onClickChild(2)"
+                    [routerLink]="'university/about'"
+                >
+                    <span class="{{this.context.nav.eu.buttonLabelAbout | async }}">About</span>
+                    <span class="ink-vertical {{this.context.nav.eu.buttonLabelAbout  | async}}-ink"></span>
+                </a> -->
+                <mat-divider></mat-divider>
+                <a
+                    mat-list-item
+                    class="list-button"
+                    aria-label="Learning Catalog"
+                    [routerLink]="'university/catalog'"
+                    (click)="onClickChild(3)"
+                >
+                    <span class="{{this.context.nav.eu.buttonLabelCatalog | async }}">Course Catalog</span>
+                    <span class="ink-vertical {{this.context.nav.eu.buttonLabelCatalog  | async}}-ink"></span>
+                </a>
+                <mat-divider></mat-divider>
+                <a
+                    mat-list-item
+                    href="javascript:void(0)"
+                    (click)="onClick(1)"
+                    class="list-button"
+                >
+                    <span class="{{this.context.nav.ee.buttonLabelHome | async }}">Engineering Excellence</span>
+                    <span class="ink-vertical {{this.context.nav.ee.buttonLabelHome  | async}}-ink"></span>
+                </a>
+                <mat-divider></mat-divider>
+            </mat-nav-list>
+        </mat-sidenav>
+        <mat-sidenav-content class="sidenav-content ">
+            <div id="destination"></div>
+            <ng-content></ng-content>
+
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</ng-container>

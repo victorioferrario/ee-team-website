@@ -1,0 +1,44 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "sourceMap": true,
+    "module": "esnext",
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "es2015",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "es2018",
+      "dom"
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@ee-workspace/domain": [
+        "libs/domain/src/index.ts"
+      ],
+      "@ee-workspace/fabric": [
+        "libs/fabric/src/index.ts"
+      ],
+      "@ee-workspace/services": [
+        "libs/services/src/index.ts"
+      ],
+      "@ee-workspace/forms": [
+        "libs/forms/src/index.ts"
+      ],
+      "@ee-workspace/scrollflow": [
+        "libs/scrollflow/src/index.ts"
+      ],
+      "@ee-workspace/generic-collections": [
+        "libs/ts-generic-collections/src/public_api.ts"
+      ]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "tmp"
+  ]
+}

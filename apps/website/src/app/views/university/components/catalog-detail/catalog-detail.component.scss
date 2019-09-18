@@ -1,0 +1,156 @@
+.view-page {
+  display: block;
+  margin: auto;
+  width: 100%;
+  position: relative;
+  padding: 0;
+  padding-top: 0;
+}
+.view-content {
+  display: block;
+  margin: auto;
+  width: 92%;
+  position: relative;
+  padding: 2.8rem;
+  padding-top: 1.8rem;
+  padding-left: 1.8rem;
+  padding-right: 1.8rem;
+  padding-bottom: 0;
+}
+.tab-label {
+  font-size: 1.2rem;
+}
+.tab-icon {
+  color: #71bf4a;
+}
+.text-details-wrapper {
+  padding: 1.8rem;
+  font-size: 1.5rem;
+}
+.text-details-row {
+  display: block;
+  clear: both;
+  border-bottom: solid 0 #ccc;
+  padding-bottom: 5px;
+}
+.text-details-label {
+  color: rgba(56, 96, 135, 1);
+}
+//
+.iframe-xlarge-border {
+  max-width: 1280px;
+  border: solid 1px #ccc;
+  margin: auto;
+  margin-top: 25px;
+}
+.iframe-xlarge-no-border {
+  max-width: 1280px;
+  border: solid 0 #ccc;
+  margin: auto;
+  margin-top: 25px;
+}
+.iframe-xlarge-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+.iframe-xlarge {
+  border: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  max-width: 100%;
+}
+//
+//
+.iframe-large-border {
+  max-width: 853px;
+  border: solid 1px #ccc;
+  margin: auto;
+  margin-top: 25px;
+}
+.iframe-large-no-border {
+  max-width: 853px;
+  border: solid 0 #ccc;
+  margin: auto;
+  margin-top: 25px;
+}
+.iframe-large-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+.iframe-large {
+  border: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  max-width: 100%;
+}
+//
+.iframe-medium-border {
+  max-width: 640px;
+  border: solid 1px #ccc;
+  margin: auto;
+  margin-top: 25px;
+}
+.iframe-medium-no-border {
+  max-width: 640px;
+  border: solid 0 #ccc;
+  margin: auto;
+  margin-top: 25px;
+}
+.iframe-medium-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+.iframe-medium {
+  border: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  max-width: 100%;
+}
+.iframe-small-border {
+  max-width: 460px;
+  border: solid 1px #ccc;
+  margin: auto;
+  margin-top: 25px;
+}
+.iframe-small-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+.iframe-small {
+  border: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  max-width: 100%;
+}
+
+@media (max-width: 600px) {
+  .view-content {
+    padding-left: 0;
+    padding-bottom: 0;
+    padding-right: 0;
+  }
+}
